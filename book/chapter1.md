@@ -39,4 +39,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“更优雅”的解决这个问题，是将这些东西放在客户端代理中，与应用程序一起部署，这种模式称为“sidecar”。Lyft的Envoy项目就是用来实现这种模式，在这个伟大的项目中，提供了一个非常小巧的C++客户端。该客户端用于处理断路器、隔水舱、服务发现、Metrics统计以及分布式跟踪等，这意味着一个Envoy代理会与每个应用程序一起部署（一比一的形式）。这使得应用程序无论使用哪种编程语言都可以利用此功能。应用通过“localhost”与其他服务进行通信，而代理会将请求反向代理给实际的服务端，代理知道如何找到后端服务，并进行自适应路由、重试、跟踪以及限流等。作为一名开发人员，我可以保持我的应用程序代码干净，并免费获得所有这些便利。
 
-The “more elegant” way of doing this, IMHO, is put these things in a client-side proxy that gets deployed as a “sidecar” with your application. A great little project that helps with this is the Envoy project from Lyft. Envoy is a very small, C++ client-proxy that handles things like circuit breaking/bulkheading/service discovery/metrics collection/tracing etc. This means a single Envoy proxy gets deployed alongside each application (1-1). This allows the apps to take advantage of this functionality regardless of what programming language. The app basically talks to other services through “localhost” and Envoy does all of the proxying to the actual service. It knows how to find the backend services, do adaptive routing, retries, tracing, throttling, etc. And as a developer, I can keep my application code clean and get all of these conveniences for free.
+<center>
+<img src="https://github.com/weipeng2k/envoy-guide/raw/master/resource/chapter1-1.jpg" />
+</center>
