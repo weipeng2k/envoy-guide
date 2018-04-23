@@ -42,3 +42,7 @@
 <center>
 <img src="https://github.com/weipeng2k/envoy-guide/raw/master/resource/chapter1-1.jpg" />
 </center>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当前使用REST构建微服务是事实标准，启动一个服务，公开一个REST端点并将其用于服务之间的所有交互。在交互方面，新的趋势和技术不仅仅是显示了新，更重要的是将交互方式变得更加优雅。在REST服务中，对于不兼容的服务变更、服务数据格式的类型安全以及性能（至少基于HTTP 1.1）都比基于二进制的RPC服务要弱。而基于非阻塞的通信框架类似RxJava、Vert.x不断出现，甚至像gRPC这样的RPC框架，让服务的交互变得更加优雅。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开源社区以及这些新工具，将更强大的功能以更简单的方式提供给了用户，让我们能用更简单的方式构建更好的应用。
